@@ -3,9 +3,9 @@
 
 type User @model {
   id: ID! @isUnique
-  name: String
-  dateOfBirth: DateTime
-
+  username: String! @isUnique
+  name: String!
+  point: Int! @default(value: 0)
   # Uncomment below - you can declare relations between models like this
 
   # posts: [Post!]! @relation(name: "UserPosts")
